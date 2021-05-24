@@ -1,0 +1,47 @@
+﻿<mah:MetroWindow x:Class="UtopiaBot.SetupWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                 xmlns:controls="http://metro.mahapps.com/winf/xaml/controls"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 Title="Utopia-Bot | Начальная настройка"
+                 Width="630.947"
+                 Height="384"
+                 Icon="Images/icon.ico"
+                 WindowStartupLocation="CenterScreen"
+                 mc:Ignorable="d">
+    <Grid>
+        <GroupBox Header="Telegram API" HorizontalAlignment="Left" Height="299" Margin="10,10,0,0" VerticalAlignment="Top" Width="300"/>
+        <TextBlock Foreground="#FFC1C1C1" TextAlignment="Center" HorizontalAlignment="Left" Margin="317,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="154" Width="289" FontSize="14">
+            Utopia BOT
+            <LineBreak/>
+            <LineBreak/>
+            Представляет из себя Telegram бота,
+            <LineBreak/>
+            который может взаимодействовать с 
+            <LineBreak/>
+            экосистемой сервиса Utopia.
+            <LineBreak/>
+            <LineBreak/>
+            Сделано специально для хакатона Utopia.
+            <LineBreak/>
+            Автор: vityaSteam
+        </TextBlock>
+        <Image Source="Images/favicon.ico" HorizontalAlignment="Left" Height="119" Margin="403,10,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Токен:" HorizontalAlignment="Left" Margin="17,42,0,0" VerticalAlignment="Top"/>
+        <PasswordBox mah:TextBoxHelper.Watermark="Bot Token"
+                     mah:TextBoxHelper.UseFloatingWatermark="True"
+                     Style="{StaticResource MahApps.Styles.PasswordBox.Button.Revealed}"
+                     HorizontalAlignment="Left" Margin="22,64,0,0" VerticalAlignment="Top" Width="277"
+                     Name="TGToken"/>
+        <Label Content="Лог:" HorizontalAlignment="Left" Margin="17,101,0,0" VerticalAlignment="Top"/>
+        <TextBox IsReadOnly="True" Name="TGbotLog" HorizontalAlignment="Left" Height="146" Margin="22,127,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="277"/>
+        <Rectangle Fill="CornflowerBlue" HorizontalAlignment="Left" Height="1" Margin="5,314,0,0" Stroke="#FF0565B4" VerticalAlignment="Top" Width="614"/>
+        <Button Name="NextBtn" IsEnabled="False" Content="Далее >>" HorizontalAlignment="Left" Margin="538,320,0,0" VerticalAlignment="Top" Width="75" Click="NextBtn_Click"/>
+        <Button Name="AuthTGBot" Content="Войти" HorizontalAlignment="Left" Margin="201,278,0,0" VerticalAlignment="Top" Width="98" Click="AuthTGBot_Click"/>
+        <TextBlock  MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"  TextDecorations="UnderLine"  HorizontalAlignment="Left" Margin="10,327,0,-6" TextWrapping="Wrap" Cursor="Hand" Text="Инструкция по использованию" VerticalAlignment="Top" Width="214" Foreground="CornflowerBlue"/>
+
+        <!--  Your content  -->
+    </Grid>
+</mah:MetroWindow>
